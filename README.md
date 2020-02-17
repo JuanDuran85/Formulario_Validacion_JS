@@ -1,8 +1,9 @@
-# Formulario_Validacion_JS
+# # Formulario para realizar Validacón con JS
 
 Formulario para ser validado por los estudiantes mediante un fork y un pull requests, como parte del primer desafio.
 
 ## ¿Que deben hacer?
+
 * Realizar un fork a este repositorio.
 * Clonar el repositorio en su computador.
 * Crear una rama con su nombre (ejemplo: formulario_pedro). Utilizar git checkout -b formulario_pedro
