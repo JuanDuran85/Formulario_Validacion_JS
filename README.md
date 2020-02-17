@@ -1,4 +1,4 @@
-# # Formulario para realizar Validacón con JS
+# Formulario para realizar Validacón con JS
 
 Formulario para ser validado por los estudiantes mediante un fork y un pull requests, como parte del primer desafio.
 
