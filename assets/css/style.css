@@ -1,0 +1,81 @@
+/* line 1, ../sass/base/_base.scss */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f5f0f0; }
+  /* line 8, ../sass/base/_base.scss */
+  body * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  /* line 13, ../sass/base/_base.scss */
+  body .central {
+    max-width: 1200px;
+    margin: 0 auto; }
+
+/* line 1, ../sass/layout/_header.scss */
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #000; }
+
+/* line 3, ../sass/layout/_forms.scss */
+.formRegistrar {
+  background-color: #d9dde9;
+  width: 60%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  /* line 13, ../sass/layout/_forms.scss */
+  .formRegistrar .contenedorForm {
+    width: 80%;
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d3f0d5;
+    border-radius: 10px; }
+    /* line 27, ../sass/layout/_forms.scss */
+    .formRegistrar .contenedorForm .inputContainer {
+      width: 80%;
+      padding: 0.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #d3f0d5; }
+      /* line 34, ../sass/layout/_forms.scss */
+      .formRegistrar .contenedorForm .inputContainer label {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: #304c97; }
+      /* line 41, ../sass/layout/_forms.scss */
+      .formRegistrar .contenedorForm .inputContainer .input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 0.5rem; }
+      /* line 48, ../sass/layout/_forms.scss */
+      .formRegistrar .contenedorForm .inputContainer .botonRegistro {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 5px;
+        height: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: #d9dde9;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #304c97; }
+        /* line 62, ../sass/layout/_forms.scss */
+        .formRegistrar .contenedorForm .inputContainer .botonRegistro:hover {
+          background-color: #304c97;
+          color: #fff; }
+
+/*# sourceMappingURL=style.css.map */

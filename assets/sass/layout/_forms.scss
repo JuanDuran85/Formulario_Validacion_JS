@@ -1,0 +1,70 @@
+
+
+.formRegistrar{
+    background-color: $azulLight;
+    width: 60%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+
+    .contenedorForm{
+        // background-color: $azulLight;
+        // //border-radius: 5px;
+        // padding: 0.5rem;
+        // margin-left: 1rem;
+        // margin-right: 1rem;
+
+            width: 80%;
+            padding: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+             background-color:$azul;
+             border-radius: 10px;
+
+        .inputContainer{
+            width: 80%;
+            padding: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+             background-color:$azul;
+
+            label{
+                font-family: $openSans;
+                font-size: $x-small;
+                font-weight: $regular;
+                color: $azulOscuro;
+            }
+
+            .input{
+                width: 100%;
+                // background-color: red;
+                border-radius: 5px;
+                padding: 0.5rem;
+            }
+
+            .botonRegistro{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 5px;
+                height: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                background-color: $azulLight;
+                font-family: $raleway;
+                font-size: $medium;
+                font-weight: $bold;
+                color: $azulOscuro;
+
+                &:hover{
+                    background-color: $azulOscuro;
+                    color: $blanco;
+                }
+            }
+        }
+
+    }
+}
