@@ -1,54 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Validado JS</title>
-</head>
-<body>
-    <h1>Formulario</h1>
-    <form id="formulario">
-        <table>
-            <tr>
-                <td>Nombre: </td>
-                <td>
-                    <input type="text" name="nombre" id="nombre" />
-                </td>
-            </tr>
-            <tr>
-                <td>Telefono: </td>
-                <td>
-                    <input type="text" name="telefono" id="telefono" />
-                </td>
-            </tr>
-            <tr>
-                <td>Fecha de nacimiento: </td>
-                <td>
-                    <input type="text" name="dia" size="2" id="dia" />
-                    <input type="text" name="mes" size="2" id="mes" />
-                    <input type="text" name="ano" id="ano" size="4" />
-                </td>
-            </tr>
-            <tr>
-                <td>Sexo : </td>
-                <td>
-                    <input type="radio" name="sexo" value="H" checked /> Hombre
-                    <input type="radio" name="sexo" value="M" /> Mujer
-                </td>
-            </tr>
-            <tr>
-                <td>Mayor de 18:</td>
-                <td>
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Desafío Latam Registro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <script type="text/javascript" src="assets/js/script.js"> </script>
+  </head>
+  <body>
+    <h2 class="text-center">Desafío Latam Registro</h2>
+    <form onsubmit="validate()">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="assets/images/logodesafion.PNG" alt="logo desafion laatam">
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <label for="nombres">Nombres</label>
+              </div>
+              <div class="col-sm">
+                <input type="text"  class="field" id="names"  maxlength="30" size="30" >
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="apellidos">Apellidos</label>
+                </div>
+                <div class="col-sm">
+                   <input type="text"  class="field" id="secondnames"  size="30" maxlength="80" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="apellidos">Fecha Nacimiento</label>
+                </div>
+                <div class="col-sm">
+                   <input type="text"  class="field" id="dia"  size="02" maxlength="02" >
+                   <input type="text"  class="field" id="mes"  size="02" maxlength="02" >
+                   <input type="text"  class="field" id="ano"  size="04" maxlength="04" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="apellidos">Sexo</label>
+                </div>
+                <div class="col-sm">
+                    <input type="radio" name="sexo" value="H" checked /> Masculino
+                    <input type="radio" name="sexo" value="M" /> Femenino
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="apellidos">Mayor de 18 años?</label>
+                </div>
+                <div class="col-sm">
                     <input type="checkbox" name="mayor" id="mayor" checked/>
-                </td>
-            </tr>
-            </td>
-            </tr>
-        </table>
-        <p>
-            <input type="submit" value="Enviar" id="enviar" />
-            <input type="reset" value="Borrar" id="borrar" />
-        </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-sm">
+                    <input type="email"  class="field" id="email"  size="30" maxlength="100" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="phone">Teléfono</label>
+                </div>
+                <div class="col-sm">
+                    <input type="number"  class="field" id="phone"  maxlength="20" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="usuario">Usuario</label>
+                </div>
+                <div class="col-sm">
+                    <input type="text"  class="field" id="username"  size="30" maxlength="20" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="contraseña">Contraseña</label>
+                </div>
+                <div class="col-sm">
+                    <input type="password"  class="field" id="password" size="30" minlength="8" maxlength="12" >
+                </div>
+            </div>
+        </div>
+        <div class="center-content">
+            <button type="submit" class="btn btn-success" id="btn"><span>{!Enviar!}</span></button>
+        </div>
     </form>
-</body>
+
+    <footer class="m-5 ">
+        <img src="assets/images/logodesafionfooter.PNG" alt="logo desafion latam">
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
