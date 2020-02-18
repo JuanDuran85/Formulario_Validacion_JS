@@ -6,6 +6,7 @@ window.onload = function()
     {
         event.preventDefault();
         valCampo(name);
+        valCampo(phone);
     });
     let name = 
     {
@@ -14,6 +15,14 @@ window.onload = function()
         regex: /[A-Za-z\u00C0-\u00ff\s]+/,
         element: 'nombre'
     }
+    let phone = 
+    {
+        dom: document.getElementById("telefono"),
+        maxLength: 15,
+        regex: /[\d\s]+/,
+        element: 'telefono'
+    }
+
     let valCampo = function(objeto)
     {
         console.log(objeto)
@@ -30,4 +39,9 @@ window.onload = function()
             console.log("el "+objeto.element+" supera los "+objeto.maxLength+" caracteres.");
         }
     }
+
+   
+   
+
+}
 
