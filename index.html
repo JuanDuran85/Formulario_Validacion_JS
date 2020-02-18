@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Formulario Validado JS</title>
 </head>
 <body>
     <h1>Formulario</h1>
-    <form id="formulario">
-        <table>
+    <form id="formulario" class="formulario" >
+        <table >
             <tr>
                 <td>Nombre: </td>
                 <td>
-                    <input type="text" name="nombre" id="nombre" />
+                    <input type="text" name="nombre" id="nombre" class="form-control " />
+                </td>
+            </tr>
+            <tr>
+                <td>Apellido: </td>
+                <td>
+                    <input type="text" name="apellido" id="apellido" class="form-control " />
                 </td>
             </tr>
             <tr>
                 <td>Telefono: </td>
                 <td>
-                    <input type="text" name="telefono" id="telefono" />
+                    <input type="text" name="telefono" id="telefono" class="form-control "/>
                 </td>
             </tr>
             <tr>
                 <td>Fecha de nacimiento: </td>
                 <td>
-                    <input type="text" name="dia" size="2" id="dia" />
+                    <input type="text" name="dia" size="2" id="dia"  />
                     <input type="text" name="mes" size="2" id="mes" />
                     <input type="text" name="ano" id="ano" size="4" />
                 </td>
@@ -46,9 +56,12 @@
             </tr>
         </table>
         <p>
-            <input type="submit" value="Enviar" id="enviar" />
-            <input type="reset" value="Borrar" id="borrar" />
+            <input class="btn btn-primary text-center" type="submit" value="Enviar" id="enviar" onclick="validando()"/>
+            <input class="btn btn-danger text-center" type="reset" value="Borrar" id="borrar" />
         </p>
     </form>
+
+<script type = "text/javascript" src="assets/js/javascript.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 </html>
