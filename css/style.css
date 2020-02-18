@@ -58,3 +58,9 @@ h1 {
   color: white;
   border: 0;
 }
+
+/* Mensajes de error */
+td p {
+  font-size: 0.8rem;
+  color: darkred;
+}

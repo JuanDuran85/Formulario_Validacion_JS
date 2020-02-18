@@ -58,6 +58,10 @@ window.onload = function()
         if(objeto.dom.value == "")
         {
             console.log("el "+objeto.element+" está vacio");
+            let node = document.createElement("P");
+            let textnode = document.createTextNode("El "+objeto.element+" está vacío.");
+            node.appendChild(textnode);
+            document.getElementById("tabla-"+objeto.element).appendChild(node); 
         }
         else if(!objeto.regex.test(objeto.dom.value))
         {
