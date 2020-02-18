@@ -17,7 +17,9 @@ window.onload = function()
         valCampo(phone);
         valDate(date);
         valGender(gender);
+        valAdulthood(adulthood);
     });
+
     let name = 
     {
         dom: document.getElementById("nombre"),
@@ -48,6 +50,8 @@ window.onload = function()
         female: document.getElementById("femenino"),
         other: document.getElementById("otro"),
     }
+
+    let adulthood = document.getElementById("mayor");
 
     let valCampo = function(objeto)
     {
@@ -98,7 +102,17 @@ window.onload = function()
         }
     }
    
-   
+   let valAdulthood = function(checkbox)
+   {
+       if(checkbox.checked)
+       {
+           console.log("Uy pero que adulto eres :D");
+       }
+       else
+       {
+           console.log("anoperokepony");
+       }
+   }
 
 }
 
