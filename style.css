@@ -1,0 +1,46 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 5%;
+  color: rgb(92, 91, 91);
+}
+
+
+.form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20vh;
+  height: 435px;
+  width: 70vw;
+  margin-left: 0;
+  padding: .5rem 1rem;
+  border-radius: 3px;
+  background-color: rgb(236, 143, 119);
+  color: white;
+}
+
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.form__button {
+  padding-top: .5rem;
+  text-align: center;
+}
