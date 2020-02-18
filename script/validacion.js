@@ -4,16 +4,19 @@ window.onload = function()
     let submit = document.getElementById("enviar");
     submit.addEventListener("click", function(event)
     {
+        event.preventDefault();
+
         date.dateFormat = new Date
         (
             document.getElementById("ano").value,
             document.getElementById("mes").value - 1,
             document.getElementById("dia").value
         );
-        event.preventDefault();
+        
         valCampo(name);
         valCampo(phone);
         valDate(date);
+        valGender(gender);
     });
     let name = 
     {
@@ -37,6 +40,13 @@ window.onload = function()
         maxLength: 7,
         regex: /[\d\s]+/,
         element: 'fecha de nacimiento' 
+    }
+
+    let gender = 
+    {
+        male: document.getElementById("masculino"),
+        female: document.getElementById("femenino"),
+        other: document.getElementById("otro"),
     }
 
     let valCampo = function(objeto)
@@ -70,6 +80,23 @@ window.onload = function()
 
     }
 
+    let valGender = function(gender)
+    {
+        switch (true)
+        {
+            case gender.male.checked:
+                console.log("Elegiste género masculino");
+                break;
+            case gender.female.checked:
+                console.log("Elegiste género femenino");
+                break;
+            case gender.other.checked:
+                console.log("Elegiste otro género");
+                break;
+            default:
+                console.log("No elegiste género");
+        }
+    }
    
    
 
