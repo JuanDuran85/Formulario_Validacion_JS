@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #B1E4EB;
+}
+
+form {
+  background-color: #8F9199;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 20px 10px;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.field {
+  border: solid 1px #726F73;
+}
+
+.field:focus {
+  border-color: #2AB7CA;
+}
+
+.center-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

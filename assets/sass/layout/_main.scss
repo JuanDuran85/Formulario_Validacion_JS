@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $bluelagoon;
+}
+
+//Formulario
+form {
+    background-color: $spanishgray;
+    border-radius: $px10;
+    color: $white;
+    font-size: $medium;
+    padding: $px10*2 $px10*1;
+    margin: 0 auto;
+    width: $width500;
+
+}
+.field {
+    border: solid 1px $nickel;  
+
+}
+
+.field:focus{   
+    border-color: $ballblue; 
+}
+
+.center-content{
+    text-align: center; 
+    margin-bottom: $px10*10;
+} 
+
+ 
