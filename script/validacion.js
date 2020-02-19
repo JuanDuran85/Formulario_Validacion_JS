@@ -40,14 +40,18 @@ window.onload = function()
         errorID: document.getElementById("error-fecha") 
     }
 
-    let gender = 
-    {
+    let gender = {
         male: document.getElementById("masculino"),
         female: document.getElementById("femenino"),
         other: document.getElementById("otro"),
+        errorID: document.getElementById("error-genero") 
     }
 
-    let adulthood = document.getElementById("mayor");
+    let adulthood = {
+        dom: document.getElementById("mayor"),
+        errorID: document.getElementById("error-checkbox") 
+    }
+    
 
     let valCampo = function(objeto)
     {
