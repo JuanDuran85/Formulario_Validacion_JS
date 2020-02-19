@@ -36,6 +36,9 @@ h1 {
 .table input {
   padding: 2% 5%;
 }
+.input-text {
+  width: 100%;
+}
 .genero{
   display: flex;
   flex-direction: column;
@@ -57,4 +60,10 @@ h1 {
   background-color: #428e92;
   color: white;
   border: 0;
+}
+
+/* Mensajes de error */
+.error {
+  font-size: 0.8rem;
+  color: darkred;
 }

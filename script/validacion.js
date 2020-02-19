@@ -18,101 +18,141 @@ window.onload = function()
         valDate(date);
         valGender(gender);
         valAdulthood(adulthood);
+        bienvenida(errorCount);
     });
-
-    let name = 
-    {
+    
+    let errorCount = 0;
+    let name = {
         dom: document.getElementById("nombre"),
         maxLength: 30,
         regex: /[A-Za-z\u00C0-\u00ff\s]+/,
-        element: 'nombre'
+        errorID: document.getElementById("error-nombre")
     }
-    let phone = 
-    {
+    let phone = {
         dom: document.getElementById("telefono"),
         maxLength: 15,
         regex: /[\d\s]+/,
-        element: 'telefono'
+        errorID: document.getElementById("error-telefono")
     }
-    let date = 
-    {
+    let date = {
         day: document.getElementById("dia"),
         month: document.getElementById("mes"),
         year: document.getElementById("ano"),
-        maxLength: 7,
-        regex: /[\d\s]+/,
-        element: 'fecha de nacimiento' 
+        errorID: document.getElementById("error-fecha") 
     }
 
-    let gender = 
-    {
+    let gender = {
         male: document.getElementById("masculino"),
         female: document.getElementById("femenino"),
         other: document.getElementById("otro"),
+        errorID: document.getElementById("error-genero") 
     }
 
-    let adulthood = document.getElementById("mayor");
+    let adulthood = {
+        dom: document.getElementById("mayor"),
+        errorID: document.getElementById("error-checkbox") 
+    }
+    
 
     let valCampo = function(objeto)
     {
+        let errorDiv = objeto.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
         if(objeto.dom.value == "")
         {
-            console.log("el "+objeto.element+" está vacio");
+            //console.log("No puedes dejar el "+objeto.element+" vacío.");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
         else if(!objeto.regex.test(objeto.dom.value))
         {
-            console.log("el "+objeto.element+" esta mal escrito");
+            //console.log("el "+objeto.element+" esta mal escrito");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
         else if(objeto.dom.value.length > objeto.maxLength)
         {
-            console.log("el "+objeto.element+" supera los "+objeto.maxLength+" caracteres.");
+            //console.log("el "+objeto.element+" supera los "+objeto.maxLength+" caracteres.");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
     }
 
     let valDate = function(date)
     {
+        let errorDiv = date.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
         if(date.day.value == "" || date.month.value == "" || date.year.value == "")
         {
-            console.log("la "+date.element+" está vacia");
+            //console.log("la "+date.element+" está vacia");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
         else if ((date.dateFormat.getUTCMonth() != date.month.value - 1) || (
             date.dateFormat.getUTCDate() != date.day.value) || (
             date.dateFormat.getUTCFullYear() != date.year.value))
         {
-            console.log("la "+date.element+" no existe");
+            //console.log("la "+date.element+" no existe");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
 
     }
 
     let valGender = function(gender)
     {
+        let errorDiv = gender.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
         switch (true)
         {
             case gender.male.checked:
-                console.log("Elegiste género masculino");
+                //console.log("Elegiste género masculino");
                 break;
             case gender.female.checked:
-                console.log("Elegiste género femenino");
+                //console.log("Elegiste género femenino");
                 break;
             case gender.other.checked:
-                console.log("Elegiste otro género");
+                //console.log("Elegiste otro género");
                 break;
             default:
-                console.log("No elegiste género");
+                errorCount++;
+                errorDiv.style.display = "block";
+                //console.log("No elegiste género");
         }
     }
    
    let valAdulthood = function(checkbox)
    {
-       if(checkbox.checked)
+        let errorDiv = checkbox.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
+       if(checkbox.dom.checked)
        {
-           console.log("Uy pero que adulto eres :D");
-       }
-       else
-       {
-           console.log("anoperokepony");
+           //console.log("Uy pero que adulto eres :D");
+        }
+        else
+        {
+            //console.log("anoperokepony");
+            errorCount++;
+            errorDiv.style.display = "block";
+
        }
    }
 
+   let bienvenida = function(errorCount)
+   {
+       if(errorCount == 0)
+       {
+           //console.log("todo se anti-derrumbó");
+           Swal.fire({
+            icon: 'success',
+            title: '¡Bienvenido!',
+            text: name.dom.value+' tus datos han sido ingresados con éxito.',
+          })
+       }
+   }
 }
 
