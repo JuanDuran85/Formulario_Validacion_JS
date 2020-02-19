@@ -17,13 +17,17 @@
           <tr>
             <td>Nombre: </td>
             <td id="tabla-nombre">
-              <input type="text" name="nombre" id="nombre" />
+              <input type="text" name="nombre" id="nombre" class="input-text"/>
+              <div class="error" id="error-nombre" style="display:none;">Por favor ingrese su nombre. 
+                No debe superar los 30 caracteres.</div>
             </td>
           </tr>
           <tr>
             <td>Telefono: </td>
             <td id="tabla-telefono">
-              <input type="text" name="telefono" id="telefono" />
+              <input type="text" name="telefono" id="telefono" class="input-text"/>
+              <div class="error" id="error-telefono" style="display:none;">Por favor ingrese su teléfono. 
+                Solo puede ingresar números. No debe superar los 15 caracteres.</div>
             </td>
           </tr>
           <tr>

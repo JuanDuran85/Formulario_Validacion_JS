@@ -36,6 +36,9 @@ h1 {
 .table input {
   padding: 2% 5%;
 }
+.input-text {
+  width: 100%;
+}
 .genero{
   display: flex;
   flex-direction: column;
@@ -60,7 +63,7 @@ h1 {
 }
 
 /* Mensajes de error */
-td p {
+.error {
   font-size: 0.8rem;
   color: darkred;
 }

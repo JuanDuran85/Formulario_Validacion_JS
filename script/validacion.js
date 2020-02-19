@@ -20,19 +20,17 @@ window.onload = function()
         valAdulthood(adulthood);
     });
 
-    let name = 
-    {
+    let name = {
         dom: document.getElementById("nombre"),
         maxLength: 30,
         regex: /[A-Za-z\u00C0-\u00ff\s]+/,
-        element: 'nombre'
+        errorID: document.getElementById("error-nombre")
     }
-    let phone = 
-    {
+    let phone = {
         dom: document.getElementById("telefono"),
         maxLength: 15,
         regex: /[\d\s]+/,
-        element: 'telefono'
+        errorID: document.getElementById("error-telefono")
     }
     let date = 
     {
@@ -55,21 +53,26 @@ window.onload = function()
 
     let valCampo = function(objeto)
     {
+        let errorDiv = objeto.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
         if(objeto.dom.value == "")
         {
-            console.log("el "+objeto.element+" está vacio");
-            let node = document.createElement("P");
-            let textnode = document.createTextNode("El "+objeto.element+" está vacío.");
-            node.appendChild(textnode);
-            document.getElementById("tabla-"+objeto.element).appendChild(node); 
+            //console.log("No puedes dejar el "+objeto.element+" vacío.");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
         else if(!objeto.regex.test(objeto.dom.value))
         {
-            console.log("el "+objeto.element+" esta mal escrito");
+            //console.log("el "+objeto.element+" esta mal escrito");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
         else if(objeto.dom.value.length > objeto.maxLength)
         {
-            console.log("el "+objeto.element+" supera los "+objeto.maxLength+" caracteres.");
+            //console.log("el "+objeto.element+" supera los "+objeto.maxLength+" caracteres.");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
     }
 
