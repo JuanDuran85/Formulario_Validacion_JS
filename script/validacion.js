@@ -125,13 +125,19 @@ window.onload = function()
    
    let valAdulthood = function(checkbox)
    {
-       if(checkbox.checked)
+        let errorDiv = checkbox.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
+       if(checkbox.dom.checked)
        {
-           console.log("Uy pero que adulto eres :D");
-       }
-       else
-       {
-           console.log("anoperokepony");
+           //console.log("Uy pero que adulto eres :D");
+        }
+        else
+        {
+            //console.log("anoperokepony");
+            errorCount++;
+            errorDiv.style.display = "block";
+
        }
    }
 
