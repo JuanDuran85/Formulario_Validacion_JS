@@ -19,7 +19,8 @@ window.onload = function()
         valGender(gender);
         valAdulthood(adulthood);
     });
-
+    
+    let errorCount = 0;
     let name = {
         dom: document.getElementById("nombre"),
         maxLength: 30,
@@ -32,14 +33,11 @@ window.onload = function()
         regex: /[\d\s]+/,
         errorID: document.getElementById("error-telefono")
     }
-    let date = 
-    {
+    let date = {
         day: document.getElementById("dia"),
         month: document.getElementById("mes"),
         year: document.getElementById("ano"),
-        maxLength: 7,
-        regex: /[\d\s]+/,
-        element: 'fecha de nacimiento' 
+        errorID: document.getElementById("error-fecha") 
     }
 
     let gender = 
@@ -78,15 +76,22 @@ window.onload = function()
 
     let valDate = function(date)
     {
+        let errorDiv = date.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
         if(date.day.value == "" || date.month.value == "" || date.year.value == "")
         {
-            console.log("la "+date.element+" está vacia");
+            //console.log("la "+date.element+" está vacia");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
         else if ((date.dateFormat.getUTCMonth() != date.month.value - 1) || (
             date.dateFormat.getUTCDate() != date.day.value) || (
             date.dateFormat.getUTCFullYear() != date.year.value))
         {
-            console.log("la "+date.element+" no existe");
+            //console.log("la "+date.element+" no existe");
+            errorCount++;
+            errorDiv.style.display = "block";
         }
 
     }
