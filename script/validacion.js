@@ -98,19 +98,24 @@ window.onload = function()
 
     let valGender = function(gender)
     {
+        let errorDiv = gender.errorID;
+        errorDiv.style.display = "none";
+        errorCount = 0;
         switch (true)
         {
             case gender.male.checked:
-                console.log("Elegiste género masculino");
+                //console.log("Elegiste género masculino");
                 break;
             case gender.female.checked:
-                console.log("Elegiste género femenino");
+                //console.log("Elegiste género femenino");
                 break;
             case gender.other.checked:
-                console.log("Elegiste otro género");
+                //console.log("Elegiste otro género");
                 break;
             default:
-                console.log("No elegiste género");
+                errorCount++;
+                errorDiv.style.display = "block";
+                //console.log("No elegiste género");
         }
     }
    
