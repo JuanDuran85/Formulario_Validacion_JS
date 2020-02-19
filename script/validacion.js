@@ -18,6 +18,7 @@ window.onload = function()
         valDate(date);
         valGender(gender);
         valAdulthood(adulthood);
+        bienvenida(errorCount);
     });
     
     let errorCount = 0;
@@ -141,5 +142,17 @@ window.onload = function()
        }
    }
 
+   let bienvenida = function(errorCount)
+   {
+       if(errorCount == 0)
+       {
+           //console.log("todo se anti-derrumbó");
+           Swal.fire({
+            icon: 'success',
+            title: '¡Bienvenido!',
+            text: name.dom.value+' tus datos han sido ingresados con éxito.',
+          })
+       }
+   }
 }
 
