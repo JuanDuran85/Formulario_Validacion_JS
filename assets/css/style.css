@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1
+{
+    text-align: center;
+    margin-top: 40px;
+}
+.formulario
+{
+    border-radius: 10px;
+    border: solid 2px grey;
+    margin: 100px;
+}
+
+form>table
+{
+    padding: 10px;
+    margin: 10px;
+}
+
+table>input
+{
+    width: 80%;
+}
