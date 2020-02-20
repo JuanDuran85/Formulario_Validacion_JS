@@ -1,51 +1,28 @@
-body {
-    font-family: sans-serif;
-    background-color: #a8630b;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    color: white;
+    font-family: sans-serif;
 }
-
-h1 {
+h1
+{
     text-align: center;
-    color: black;
-    padding-top: 7rem;
+    margin-top: 40px;
 }
-
-.form {
-    background-image: url(../img/img-carta.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 60%;
-    height: 50rem;
-    margin: 0 auto;  
-}
-
-.contenedor-inputs {    
-    width: 25rem;
-    height: 11rem;
-    color:black;
-    border-radius: 1rem;    
-    margin: 0 auto;  
-    padding-top: 2rem; 
-    padding-left: 2rem;
-}
-
-.input {
-    width: 100%;
-}
-
-.date {
-    text-align: center;
-}
-
-.boton {
-    background-color: #f0bb1d;
+.formulario
+{
     border-radius: 10px;
-    width: 12rem;
-    height: 2rem;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    margin-top: 2rem;
+    border: solid 2px grey;
+    margin: 100px;
 }
 
+form>table
+{
+    padding: 10px;
+    margin: 10px;
+}
+
+table>input
+{
+    width: 80%;
+}
